@@ -1,0 +1,32 @@
+.text-center {
+    text-align: center;
+}
+
+.colorContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 3px 6px #ccc;
+}
+
+.colorView {
+    width: 220px;
+    height: 200px;
+}
+
+html, body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+p, h1 {
+    color: grey;
+}

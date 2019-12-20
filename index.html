@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Guesser</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="colorContainer">
+            <div>
+                <h1 class="text-center">Color</h1>
+                <div class="colorView" v-bind:style="{ backgroundColor : getRandomColor }"></div>
+            </div>
+            <div class="text-center">
+                <h1>Your Guess</h1>
+                <div class="colorView" v-bind:style="{ backgroundColor : getGuessColor }"></div>
+                <p>R: {{guess.red}} G: {{guess.green}} B: {{guess.blue}}</p>
+            </div>
+        </div>
+        <div>
+            <button>Submit Guess</button>
+            <input id="redSlider" type="range" min="0" max="255" value="128" v-model="guess.red" class="redSlider">
+            <input id="blueSlider" type="range" min="0" max="255" value="128" v-model="guess.green" class="blueSlider">
+            <input id="greenSlider" type="range" min="0" max="255" value="128" v-model="guess.blue" class="greenSlider">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="app.js"></script>
